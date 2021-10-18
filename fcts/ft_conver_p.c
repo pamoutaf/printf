@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_conver_p.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:37:21 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/15 12:18:43 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 12:52:55 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	ft_conversion_x_up(va_list params)
 {
 	int		len;
 	int		current;
-	char	*str;
 
 	current = va_arg(params, unsigned int);
 	len = ft_len_hex(current);
@@ -53,7 +52,6 @@ int	ft_conversion_x_low(va_list params)
 {
 	int		len;
 	int		current;
-	char	*str;
 
 	current = va_arg(params, unsigned int);
 	len = ft_len_hex(current);
@@ -65,11 +63,10 @@ int	ft_conversion_p(va_list params)
 {
 	size_t	current;
 	int		len;
-	char 	*temp;
 
 	current = va_arg(params, size_t);
 	ft_putstr("0x");
 	ft_putnbr_hex(current);
-	len = ft_nbrlen(current) + 2;
+	len = ft_len_hex(current) + 2;
 	return (len);
 }

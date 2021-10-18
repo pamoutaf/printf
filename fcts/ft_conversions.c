@@ -6,7 +6,7 @@
 /*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 17:15:56 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 12:00:29 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 16:04:30 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,18 @@ char	ft_conversion_id(va_list params)
 char	ft_conversion_s(va_list params)
 {
 	int		i;
-	void	*current;
+	char	*current;
+	int		len;
 
 	current = va_arg(params, char *);
 	i = 0;
 	ft_putstr(current);
-	return (ft_strlen(current));
+	len = ft_strlen(current);
+	return (len);
 }
 
 char	ft_conversion_c(va_list params)
 {
-	int		len;
 	char	current;
 
 	current = va_arg(params, int);
@@ -50,8 +51,7 @@ int	ft_conversion_u(va_list params)
 	int				len;
 
 	current = va_arg(params, unsigned long);
-	len = ft_nbrlen(current);
-	ft_putnbr(current);
+	len = ft_nbrlen_u(current);
+	ft_putnbr_u(current);
 	return (len);
 }
-

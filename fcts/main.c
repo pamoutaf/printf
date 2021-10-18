@@ -6,18 +6,19 @@
 /*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:48:14 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 11:57:40 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 16:05:37 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int	main()
 {
 	int	a;
 	int b;
-	a = ft_printf("coucou |%c| toi |%c| ça va |%c|\n", ',', 0, '?');
-	b = printf("coucou |%c| toi |%c| ça va |%c|\n", ',', 0, '?');
+	a = ft_printf(" %u \n", -4294967295);
+	b = printf(" %u \n", -4294967295);
 	printf("%i %i \n", a, b);
 	
 	return 0;

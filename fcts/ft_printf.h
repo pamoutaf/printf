@@ -6,7 +6,7 @@
 /*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:55:58 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/14 16:01:32 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 14:47:38 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
 
 char	*ft_itoa(long nbr);
 size_t	ft_strlen(const char *str);
 void	ft_putnbr(long n);
 int		ft_nbrlen(int nbr);
 void	ft_putstr(const char *s);
-int		ft_len_hex(unsigned int nbr);
+int		ft_len_hex(unsigned long nbr);
 char	ft_conversion_id(va_list params);
 size_t	ft_double_percent(const char c);
 char	ft_conversion_s(va_list params);
@@ -36,4 +37,6 @@ void	ft_putchar(const char c);
 void	ft_putnbr_u(unsigned long n);
 void	ft_putnbr_hex(unsigned long n);
 int		ft_conversion_p(va_list params);
+void	ft_putnbr_u(unsigned long n);
+int		ft_nbrlen_u(unsigned long nbr);
 #endif
