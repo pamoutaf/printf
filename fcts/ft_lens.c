@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lens.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:17:58 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 16:03:38 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 19:31:17 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,24 @@ int	ft_nbrlen(int nbr)
 	return (i);
 }
 
-int	ft_nbrlen_u(unsigned long nbr)
+int	ft_nbrlen_u(unsigned int nbr)
 {
 	int	i;
 
 	i = 0;
 	if (nbr == 0)
 		i++;
-	else if (nbr >= LONG_MIN)
+	if (nbr < 0)
 		return (1);
-	else if (nbr <= ULONG_MAX)
+	if (nbr >= 4294967295)
 		return (10);
-	while (nbr != 0)
+	while (nbr != 0 && nbr > 0)
 	{
 		nbr = nbr / 10;
 		i++;
 	}
 	return (i);
+	
 }
 
 size_t	ft_strlen(const char *str)

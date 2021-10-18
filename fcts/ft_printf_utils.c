@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:03:28 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 16:05:17 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 19:43:12 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_putchar(char c)
 
 void	ft_putstr(const char *s)
 {
-	int	len;
 	if (s == NULL)
 		write(1, "(null)", 6);
 	write(1, s, ft_strlen(s));
@@ -45,8 +44,9 @@ void	ft_putnbr(long n)
 	else
 		ft_putchar(n + '0');
 }
-void	ft_putnbr_u(unsigned long n)
+void	ft_putnbr_u(unsigned int n)
 {
+	/*
 	if (n > 9 && n < 4294967295)
 	{
 		ft_putnbr_u(n / 10);
@@ -54,8 +54,13 @@ void	ft_putnbr_u(unsigned long n)
 	}
 	else if (n >= 4294967295)
 		write(1, "4294967295", 10);
-	else if (n >= LONG_MIN && n < 0)
-		ft_putchar('0');
+	else if (n < 0)
+		write(1, "0", 1);
 	else
 		ft_putchar(n + '0');
+		void    ft_putnbr_u(unsigned int n)
+*/
+    if (n > 9)
+        ft_putnbr_u(n / 10);
+    ft_putchar((n % 10) + '0');
 }

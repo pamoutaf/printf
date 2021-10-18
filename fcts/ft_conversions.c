@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_conversions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 17:15:56 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 16:04:30 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:26:01 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_conversion_u(va_list params)
 	int				len;
 
 	current = va_arg(params, unsigned long);
-	len = ft_nbrlen_u(current);
 	ft_putnbr_u(current);
+	len = ft_nbrlen_u(current);
 	return (len);
 }

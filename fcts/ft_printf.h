@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:55:58 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 14:47:38 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 19:31:27 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ int		ft_conversion_x_low(va_list params);
 int		ft_conversion_x_up(va_list params);
 int		ft_printf(const char *str, ...);
 void	ft_putchar(const char c);
-void	ft_putnbr_u(unsigned long n);
+void	ft_putnbr_u(unsigned int n);
 void	ft_putnbr_hex(unsigned long n);
 int		ft_conversion_p(va_list params);
-void	ft_putnbr_u(unsigned long n);
-int		ft_nbrlen_u(unsigned long nbr);
+int		ft_nbrlen_u(unsigned int nbr);
 #endif
