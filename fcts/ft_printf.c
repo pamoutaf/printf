@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:55:21 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/15 12:30:32 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:55:50 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ static int	ft_convert(const char *str, va_list params, int i)
 	else if (str[i] == '%')
 		write(1, "%", 1);
 	else if (str[i] == 'c')
-	{
-		printf("coucoutest\n");
 		return (ft_conversion_c(params));
-	}
 	else if (str[i] == 'u')
 		return (ft_conversion_u(params));
 	else if (str[i] == 'x')

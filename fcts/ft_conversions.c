@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_conversions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 17:15:56 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/15 12:33:23 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/18 12:00:29 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,8 @@ char	ft_conversion_c(va_list params)
 	char	current;
 
 	current = va_arg(params, int);
-	if (current == '\0')
-		return (0);
-	else 
-	{	ft_putchar(current);
-		return (1);
-	}
+	ft_putchar(current);
+	return (1);
 }
 
 int	ft_conversion_u(va_list params)
