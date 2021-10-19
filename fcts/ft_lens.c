@@ -3,16 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lens.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pamoutaf <pamoutaf@student.s19.be>         +#+  +:+       +#+        */
+/*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:17:58 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 19:31:17 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/19 13:25:02 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_len_hex(unsigned long nbr)
+int	ft_len_hex(unsigned int nbr)
+{
+	int	i;
+
+	i = 0;
+	if (nbr <= 0)
+		i++;
+	while (nbr)
+	{
+		i++;
+		nbr /= 16;
+	}
+	return (i);
+}
+
+int	ft_len_p(unsigned int nbr)
 {
 	int	i;
 
@@ -33,7 +48,7 @@ int	ft_nbrlen(int nbr)
 
 	i = 0;
 	if (nbr <= 0)
-		return (1);
+		i++;
 	while (nbr != 0)
 	{
 		nbr = nbr / 10;
@@ -59,7 +74,6 @@ int	ft_nbrlen_u(unsigned int nbr)
 		i++;
 	}
 	return (i);
-	
 }
 
 size_t	ft_strlen(const char *str)

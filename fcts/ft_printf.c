@@ -6,7 +6,7 @@
 /*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:55:21 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/18 11:55:50 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/19 13:11:31 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_convert(const char *str, va_list params, int i)
 	else if (str[i] == 's')
 		return (ft_conversion_s(params));
 	else if (str[i] == '%')
-		write(1, "%", 1);
+		return (ft_double_percent('%'));
 	else if (str[i] == 'c')
 		return (ft_conversion_c(params));
 	else if (str[i] == 'u')
@@ -29,11 +29,11 @@ static int	ft_convert(const char *str, va_list params, int i)
 	else if (str[i] == 'X')
 		return (ft_conversion_x_up(params));
 	else if (str[i] == 'p')
-		return(ft_conversion_p(params));
+		return (ft_conversion_p(params));
 	return (0);
 }
 
-int		ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		len;
@@ -47,10 +47,10 @@ int		ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if (str[i] != '%')
-			{
-				write(1, &str[i], 1);
-				len++;
-			}
+		{
+			write(1, &str[i], 1);
+			len++;
+		}
 		if (str[i] == '%')
 		{
 			len = len + ft_convert(str, params, i + 1);

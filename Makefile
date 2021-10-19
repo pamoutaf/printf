@@ -6,7 +6,7 @@
 #    By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/29 14:48:38 by pamoutaf          #+#    #+#              #
-#    Updated: 2021/10/14 12:53:47 by pamoutaf         ###   ########.fr        #
+#    Updated: 2021/10/19 12:56:50 by pamoutaf         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS    =   ${FCTS}ft_conversions.c \
             ${FCTS}ft_lens.c \
             ${FCTS}ft_printf_utils.c \
 			${FCTS}ft_conver_p.c \
-            ${FCTS}ft_printf.c
+            ${FCTS}ft_printf.c \
+			${FCTS}ft_double_percent.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
