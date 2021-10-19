@@ -6,7 +6,7 @@
 /*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:17:58 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/19 13:25:02 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/19 13:43:09 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int	ft_len_hex(unsigned int nbr)
 	return (i);
 }
 
-int	ft_len_p(unsigned int nbr)
+int	ft_len_p(unsigned long nbr)
 {
 	int	i;
 
 	i = 0;
-	if (nbr == 0)
+	if (nbr <= 0)
 		i++;
 	while (nbr)
 	{

@@ -6,7 +6,7 @@
 /*   By: pamoutaf <pamoutaf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:55:58 by pamoutaf          #+#    #+#             */
-/*   Updated: 2021/10/19 13:21:46 by pamoutaf         ###   ########.fr       */
+/*   Updated: 2021/10/19 13:43:15 by pamoutaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ void	ft_putnbr_u(unsigned int n);
 void	ft_putnbr_hex(unsigned int n);
 int		ft_conversion_p(va_list params);
 int		ft_nbrlen_u(unsigned int nbr);
-void	ft_putnbr_p(unsigned int n);
-int		ft_len_p(unsigned int nbr);
+void	ft_putnbr_p(unsigned long n);
+int		ft_len_p(unsigned long nbr);
 #endif
